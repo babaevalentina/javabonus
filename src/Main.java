@@ -1,13 +1,17 @@
 public class Main {
     public static void main(String[] args) {
 
-        int y = 100; //начальный счет
-        int x = 300; //пополнение
+        int initialAccount = 100; //начальный счет
+        int deposit = 1200; //пополнение
 
-        if (x > 1000) {
-            System.out.println(y+x / 100);
+        int bonus;
+        if (deposit > 1000) {
+            bonus = deposit / 100;
         } else {
-            System.out.println(y);
+            bonus = 0;
         }
+        int resultAccount = initialAccount + deposit + bonus;
+        System.out.println("Бонус - " + bonus);
+        System.out.println("Итоговый счет - " + resultAccount);
     }
 }
